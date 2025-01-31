@@ -1,0 +1,453 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  background-color: #202125;
+}
+.banner{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+.banner img{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.banner h1{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-form {
+  width: 90%;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #36373a;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+}
+.mainInsertForm{
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-group {
+  width: 50%;
+  display: flex;
+  height: 50px;
+  flex-direction: column;
+  border:1px solid #828282;
+  border-radius: 4px;
+  border-right-color: transparent;
+  position: relative;
+  box-sizing: border-box;
+}
+.orgin-destination{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.to-input{
+  border-right-color: #828282;
+  border-left-color: transparent;
+}
+.From-input::before , .to-input::before{
+  content: '';
+  height: 20%;
+  width: 2px;
+  background-color: #828282;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.to-input::before{
+  left: 0;
+}
+.From-input span , .to-input span{
+  height: 20%;
+  width: 2px;
+  background-color: #828282;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.to-input span{
+  left: 0px;
+}
+.From-input::after , .to-input::after{
+  content: '';
+  height: 59%;
+  width: calc((50px - (50px / 100) * 42));
+  background-color: transparent;
+  position: absolute;
+  right: 2px;
+  top: 19%;
+  border: 1px solid #828282;
+  border-radius: 50%;
+  border-right-color: transparent; /* Make the bottom part transparent */
+  border-top-color: transparent; /* Make the left part transparent */
+  transform: translateX(50%) rotate(45deg)
+}
+.to-input::after{
+  left: 1px;  
+  transform: translateX(-50%) rotate(230deg);
+}
+input, select {
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #36373a;
+  color: white;
+}
+input::placeholder{
+  color: white;
+}
+.to-input input{
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.datePackerSection{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  padding: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.datePackerSection .input-dateDeparture{
+  width: calc(50% - 15px);
+}
+.datePackerSection img{
+  width: 30px;
+  height: 30px;
+}
+.input-dateDeparture{
+  border-right: 2px solid #828282;
+}
+.searchButton{
+  width: fit-content;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #8ab4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.search-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.searchButton img{
+  width: 20px;
+  height: 20px;
+}
+.results-container {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.flight-card , .flight-card1 , .flight-card2 {
+  width: 90%;
+  padding: 20px;
+  border-radius: 8px;
+  background: #36373a;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.flight-card1 , .flight-card2 {
+  background-color: transparent;
+}
+.flight-card1 p , .flight-card1 h1 , .flight-card2 p, .flight-card2 h1 {
+    color: white;
+}
+.flight-card p{
+  color: white;
+}
+.flight-card1 ::after{
+  content: '';
+  width: 3px;
+  height: 80%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: #828282;
+  border-radius: 10px;
+}
+.select-button {
+  background: #34a853;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+label{
+  color:white;
+}
+.rotateDestition{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 100;
+}
+.mainDataPassenger{
+  display: flex;
+  position: relative;
+}
+.mainRoundTrip , .mainChooesClass{
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+.mainRoundTrip{
+  margin-left: 20px;
+}
+.mainRoundTrip:first-child{
+  margin-left: 0px;
+}
+.mainChooesClass{
+  margin-left: 10px;
+}
+.mainRoundTrip img , .mainChooesClass img{
+  width: 20px;
+  height: 20px;
+}
+.mainRoundTrip:hover , .mainChooesClass:hover{
+  cursor: pointer;
+}
+.dataRoundTrip , .dataPerson{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.dataRoundTrip p , .dataPerson p{
+  width: fit-content;
+  color: #a3a8ae;
+  font-size: 15px;
+  padding-right: 20px;
+}
+.dataPerson p{
+  padding-right: 10px;
+}
+.dataRoundTrip img , .dataPerson img{
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  transition: rotate 300ms linear;
+}
+.mainItemRoundTrip , .mainItemClass , .mainItemChoeesPassanger{
+  width: 120px;
+  height: fit-content;
+  position: absolute;
+  z-index: 101;
+  background-color: #36373a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.mainItemChoeesPassanger{
+  width: fit-content;
+  left: 0px;
+}
+.mainItemClass{
+  width: 200px;
+}
+.itemRoundTrip{
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.itemRoundTrip:hover{
+  background-color: #96BAF7;
+  cursor: pointer;
+}
+.person{
+  width: 25px !important;
+  height: 25px !important;
+}
+p{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.itemPerson{
+  width: 200px;
+  height: 40px;
+  display: flex;
+}
+.itemPerson p{
+  width: 50%;
+  height: 100%;
+  color: #a3a8ae;
+  padding-left: 5px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+.itemPersonCount{
+  width: 50%;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.itemPersonCount img{ 
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  background-color: #4d4d50;
+  border-radius: 5px;
+}
+.plusImage{
+  background-color: #394457 !important;
+}
+.itemPersonCount p{
+  width: 10px;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+}
+.mainItemSearch{
+  width: fit-content;
+  height: fit-content;
+  background-color: #36373a;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 101;
+}
+.itemSearch{
+  width: 100%;
+  color: white;
+  height: 30px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.itemSearch:hover{
+  background-color: #96BAF7;
+  cursor: pointer;
+}
+.notfound{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.loadindDiv{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullTrip{
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2 , 50%);
+  background-color: #36373a;
+  border-radius: 20px;
+  margin: auto;
+}
+.totalPrice{
+  display: flex;
+}
+.totalPrice p{
+  margin-left: 10px;
+}
+@media (max-width: 818px) {
+  .mainInsertForm {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  input, select {
+    width: 100%;
+  }
+  .fullTrip{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .flight-card1 ::after{
+    width: 80%;
+    height: 3px;
+    left: 10%;
+    top: 100%;
+  }
+}
